@@ -1,0 +1,1 @@
+<span @class(['badge', $leave_request->status->badge()])>{{ $leave_request->status->description() }}</span>

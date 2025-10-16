@@ -1,0 +1,33 @@
+{
+    "name": "tcore/platform",
+    "description": "T core is platform base on laravel. It using development all project",
+    "keywords": [
+        "tcore"
+    ],
+    "type": "project",
+    "authors": [
+        {
+            "name": "DevT",
+            "email": "trantruong1797@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "TCore\\Base\\": "base/src",
+            "TCore\\Acl\\": "acl/src",
+            "TCore\\Support\\": "support/src",
+            "TCore\\DataTable\\": "datatable/src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TCore\\Base\\Providers\\BaseServiceProvider",
+                "TCore\\Support\\Providers\\SupportServiceProvider",
+                "TCore\\DataTable\\Providers\\DataTableServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

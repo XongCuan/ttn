@@ -1,0 +1,21 @@
+{
+    "name": "tcore/internal",
+    "description": "Tcore Internal",
+    "type": "package",
+    "require": {
+        "tcore/platform": "*@dev",
+        "theme/cms": "*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "TCore\\Internal\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TCore\\Internal\\Providers\\InternalServiceProvider"
+            ]
+        }
+    }
+}

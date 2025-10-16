@@ -1,0 +1,21 @@
+{
+    "name": "tcore/accounting",
+    "description": "Tcore Accounting",
+    "type": "package",
+    "require": {
+        "tcore/platform": "*@dev",
+        "theme/cms": "*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "TCore\\Accounting\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TCore\\Accounting\\Providers\\AccountingServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "name": "tcore/outsource",
+    "description": "Tcore Outsource",
+    "type": "package",
+    "require": {
+        "tcore/platform": "*@dev",
+        "theme/cms": "*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "TCore\\Outsource\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TCore\\Outsource\\Providers\\OutsourceServiceProvider"
+            ]
+        }
+    }
+}

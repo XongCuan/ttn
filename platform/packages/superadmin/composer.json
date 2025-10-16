@@ -1,0 +1,21 @@
+{
+    "name": "tcore/superadmin",
+    "description": "Tcore Superadmin",
+    "type": "package",
+    "require": {
+        "tcore/platform": "*@dev",
+        "theme/cms": "*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "TCore\\Superadmin\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TCore\\Superadmin\\Providers\\SuperadminServiceProvider"
+            ]
+        }
+    }
+}

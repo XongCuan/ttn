@@ -1,0 +1,21 @@
+{
+    "name": "tcore/leaverequest",
+    "description": "Tcore LeaveRequest",
+    "type": "package",
+    "require": {
+        "tcore/platform": "*@dev",
+        "theme/cms": "*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "TCore\\LeaveRequest\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TCore\\LeaveRequest\\Providers\\LeaveRequestServiceProvider"
+            ]
+        }
+    }
+}

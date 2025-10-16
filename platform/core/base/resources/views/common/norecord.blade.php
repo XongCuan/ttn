@@ -1,0 +1,1 @@
+<span class="text-muted">@lang('Không có dữ liệu')</span>

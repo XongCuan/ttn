@@ -1,0 +1,21 @@
+{
+    "name": "tcore/example",
+    "description": "Tcore Example",
+    "type": "package",
+    "require": {
+        "tcore/platform": "*@dev",
+        "theme/cms": "*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "TCore\\Example\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TCore\\Example\\Providers\\ExampleServiceProvider"
+            ]
+        }
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "theme/cms",
+    "description": "Theme CMS",
+    "type": "package",
+    "require": {
+        "tcore/platform": "*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Theme\\Cms\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Theme\\Cms\\Providers\\CMSServiceProvider"
+            ]
+        }
+    }
+}

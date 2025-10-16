@@ -1,0 +1,1 @@
+<span @class(['badge', $data->project->status?->badge()])>{{ $data->project->status?->description() }}</span>

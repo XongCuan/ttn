@@ -1,0 +1,22 @@
+<?php
+
+namespace App\Enums\Setting;
+
+use TCore\Base\Traits\EnumTrait;
+
+enum SettingTypeInput: int
+{
+    use EnumTrait;
+
+    case Text = 1;
+    case Number = 2;
+    case Email = 3;
+    case Phone = 4;
+    case Password = 5;
+    case Textarea = 6;
+    case Image = 7;
+    case Gallery = 8;
+    case Checkbox = 9;
+    case Radio = 10;
+    case Time = 11;
+}

@@ -1,0 +1,1 @@
+<span @class(['badge', $data->priority->badge()])>{{ $data->priority->description() }}</span>

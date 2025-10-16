@@ -1,0 +1,21 @@
+{
+    "name": "tcore/notification",
+    "description": "Tcore Notification",
+    "type": "package",
+    "require": {
+        "tcore/platform": "*@dev",
+        "theme/cms": "*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "TCore\\Notification\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TCore\\Notification\\Providers\\NotificationServiceProvider"
+            ]
+        }
+    }
+}

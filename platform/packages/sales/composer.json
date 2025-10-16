@@ -1,0 +1,21 @@
+{
+    "name": "tcore/sales",
+    "description": "Tcore Sales",
+    "type": "package",
+    "require": {
+        "tcore/platform": "*@dev",
+        "theme/cms": "*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "TCore\\Sales\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TCore\\Sales\\Providers\\SalesServiceProvider"
+            ]
+        }
+    }
+}

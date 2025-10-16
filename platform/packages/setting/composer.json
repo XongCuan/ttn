@@ -1,0 +1,21 @@
+{
+    "name": "tcore/setting",
+    "description": "Tcore Setting",
+    "type": "package",
+    "require": {
+        "tcore/platform": "*@dev",
+        "theme/cms": "*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "TCore\\Setting\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TCore\\Setting\\Providers\\SettingServiceProvider"
+            ]
+        }
+    }
+}

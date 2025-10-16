@@ -1,0 +1,21 @@
+{
+    "name": "tcore/auth",
+    "description": "Tcore Auth",
+    "type": "package",
+    "require": {
+        "tcore/platform": "*@dev",
+        "theme/cms": "*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "TCore\\Auth\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TCore\\Auth\\Providers\\AuthServiceProvider"
+            ]
+        }
+    }
+}

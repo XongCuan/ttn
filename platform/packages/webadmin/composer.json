@@ -1,0 +1,21 @@
+{
+    "name": "tcore/webadmin",
+    "description": "Tcore Webadmin",
+    "type": "package",
+    "require": {
+        "tcore/platform": "*@dev",
+        "theme/cms": "*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "TCore\\Webadmin\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TCore\\Webadmin\\Providers\\WebadminServiceProvider"
+            ]
+        }
+    }
+}

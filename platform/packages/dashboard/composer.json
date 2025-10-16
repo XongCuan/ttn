@@ -1,0 +1,20 @@
+{
+    "name": "tcore/dashboard",
+    "description": "Tcore Dashboard",
+    "type": "package",
+    "require": {
+        "tcore/platform": "*@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "TCore\\Dashboard\\": "src"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "TCore\\Dashboard\\Providers\\DashboardServiceProvider"
+            ]
+        }
+    }
+}
