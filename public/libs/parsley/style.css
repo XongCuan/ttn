@@ -44,3 +44,47 @@ textarea.parsley-error {
 .card .fw-bold {
     font-size: 20px;
 }
+.card-enq input[readonly] {
+    background-color: #00000026;
+    border: 1px solid black;
+    color: #000;
+    font-weight: 600;
+    cursor: not-allowed;
+    padding: 10px;
+}
+#enqDetailsTable input.form-control-sm,
+#enqDetailsTable textarea.form-control-sm {
+    font-size: 0.875rem;
+}
+
+#enqDetailsTable tbody tr:hover {
+    background-color: #f8f9fa;
+}
+
+#enqDetailsTable th {
+    background-color: var(--plyr-color-main);
+    color: white;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+}
+.badge {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.85rem;
+}
+.bg-secondary {
+    background: #6c757d;
+} /* Pending */
+.bg-warning {
+    background: #f0ad4e;
+} /* Đang lấy giá */
+.bg-info {
+    background: #0dcaf0;
+} /* Đã báo giá */
+.bg-success {
+    background: #198754;
+} /* Đã có PO */

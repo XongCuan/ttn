@@ -5,6 +5,7 @@ namespace TCore\Sales\Http\Requests;
 use App\Enums\Area;
 use Illuminate\Validation\Rules\Enum;
 use TCore\Base\Enums\Gender;
+use TCore\Base\Enums\Status;
 use TCore\Support\Http\Requests\Request;
 
 class EnqRequest extends Request
@@ -12,10 +13,11 @@ class EnqRequest extends Request
     protected function methodPost()
     {
         return [
-            'fullname' => ['required', 'string'],
+            'fullname' => ['nullable', 'string'],
             'phone' => ['nullable', 'regex:/((09|03|07|08|05)+([0-9]{8})\b)/'],
             'email' => ['nullable', 'email'],
-            'gender' => ['required', new Enum(Gender::class)],
+            'gender' => ['nullable', new Enum(Gender::class)],
+            'status' => ['nullable', new Enum(Status::class)],
             'created_at' => ['nullable', 'date:Y-m-d'],
             'source_id' => ['nullable', 'exists:App\Models\Source,id'],
             'area' => ['nullable', new Enum(Area::class)],
@@ -35,17 +37,20 @@ class EnqRequest extends Request
             'short_name' => ['nullable', 'string', 'max:255'],
             'tax_code' => ['nullable', 'string', 'max:50'],
             'customer_type' => ['nullable', 'string', 'max:100'],
+            'customer_id' => 'nullable|exists:customers,id',
+
         ];
     }
 
     protected function methodPut()
     {
         return [
-            'id' => ['required', 'exists:App\Models\Customer,id'],
-            'fullname' => ['required', 'string'],
+            'id' => ['required', 'exists:App\Models\Enq,id'],
+            'fullname' => ['nullable', 'string'],
             'phone' => ['nullable', 'regex:/((09|03|07|08|05)+([0-9]{8})\b)/'],
             'email' => ['nullable', 'email'],
-            'gender' => ['required', new Enum(Gender::class)],
+            'gender' => ['nullable', new Enum(Gender::class)],
+            'status' => ['nullable', new Enum(Status::class)],
             'created_at' => ['nullable', 'date:Y-m-d'],
             'source_id' => ['nullable', 'exists:App\Models\Source,id'],
             'area' => ['nullable', new Enum(Area::class)],
@@ -65,6 +70,7 @@ class EnqRequest extends Request
             'short_name' => ['nullable', 'string', 'max:255'],
             'tax_code' => ['nullable', 'string', 'max:50'],
             'customer_type' => ['nullable', 'string', 'max:100'],
+            'customer_id' => 'nullable|exists:customers,id',
         ];
     }
 }

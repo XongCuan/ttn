@@ -7,10 +7,12 @@ use App\Enums\Area;
 use App\Enums\Customer\CustomerType;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use TCore\Base\Enums\Gender;
+use TCore\Base\Enums\Status;
 use TCore\Base\Models\BaseModel;
 use TCore\Base\Models\District;
 use TCore\Base\Models\Province;
 use TCore\Base\Models\Ward;
+
 class Enq extends BaseModel
 {
     use HasFactory;
@@ -18,6 +20,9 @@ class Enq extends BaseModel
     protected $table = 'enq';
 
     protected $fillable = [
+        'enq_code',
+        'customer_id',
+        'brand_id',
         'invite_id',
         'admin_id',
         'team_id',
@@ -25,10 +30,10 @@ class Enq extends BaseModel
         'range_price_id',
         'sector_id',
         'fullname',
-        'company',       
-        'short_name',    
-        'tax_code',      
-        'customer_type', 
+        'company',
+        'short_name',
+        'tax_code',
+        'customer_type',
         'phone',
         'email',
         'gender',
@@ -48,36 +53,30 @@ class Enq extends BaseModel
         return [
             'gender' => Gender::class,
             'area' => Area::class,
+            'status' => Status::class,
         ];
     }
-
-    public function displayText()
+    public static function generateEnqCode()
     {
-        return $this->fullname . ($this->phone ? ' - ' . $this->phone : '');
+        $prefix = 'ENQ_' . date('Ym'); // ENQ_202510
+
+        // Lấy mã cuối cùng trong tháng này
+        $lastEnq = self::where('enq_code', 'LIKE', $prefix . '%')
+            ->orderBy('enq_code', 'desc')
+            ->first();
+
+        if ($lastEnq) {
+            // Tách số thứ tự từ mã cuối
+            $lastNumber = (int) str_replace($prefix . '_', '', $lastEnq->enq_code);
+            $newNumber = $lastNumber + 1;
+        } else {
+            // Tháng mới, bắt đầu từ 1
+            $newNumber = 1;
+        }
+
+        return $prefix . '_' . $newNumber;
     }
 
-    public function fullAddress()
-    {
-        $arr = [];
-
-        if ($this->address) {
-            $arr[] = $this->address;
-        }
-
-        if ($this->ward->name) {
-            $arr[] = $this->ward->name;
-        }
-
-        if ($this->district->name) {
-            $arr[] = $this->district->name;
-        }
-
-        if ($this->province->name) {
-            $arr[] = $this->province->name;
-        }
-
-        return implode(', ', $arr);
-    }
 
     public function enumCustomerType()
     {
@@ -153,7 +152,7 @@ class Enq extends BaseModel
     {
         $query->where(function ($q) {
             $q->where('admin_id', auth('admin')->id())
-              ->orWhereRelation('assigns', 'id', auth('admin')->id());
+                ->orWhereRelation('assigns', 'id', auth('admin')->id());
         });
     }
 
@@ -164,5 +163,9 @@ class Enq extends BaseModel
         } elseif (get_auth_admin()->isRoleLeader()) {
             $query->where('team_id', get_auth_admin()->team_id);
         }
+    }
+    public function details()
+    {
+        return $this->hasMany(EnqDetail::class);
     }
 }

@@ -13,6 +13,6 @@ enum Gender: string
     case CN = 'CN';
     
 
-    case Male = 'Male';
-    case Female = 'Female';
+    // case Male = 'Male';
+    // case Female = 'Female';
 }

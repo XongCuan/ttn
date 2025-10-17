@@ -1,4 +1,4 @@
-<div class="col-12 col-md-3">
+<div class="col-12 col-md-2">
     <div id="blockSubmit" class="card">
         <div class="card-header">
             @lang('Hành động')

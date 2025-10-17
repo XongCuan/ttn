@@ -24,11 +24,12 @@
                 @endif
             </div>
 
+            {{-- CHỖ NÀY CHO CHỌN ENQ - ĐỂ LÀM THÀNH ĐƠN HÀNG --}}
             <div class="col-12 col-md-6">
                 <div class="mb-3">
-                    <label class="form-label">@lang('Tên đơn hàng'):</label>
+                    <label class="form-label">@lang('Báo giá '):</label>
                     <x-core_base::input name="order[name]" :value="old('name')" :required="true"
-                        :placeholder="__('Tên đơn hàng')" />
+                        :placeholder="__('Chọn báo giá ')" />
                 </div>
             </div>
 

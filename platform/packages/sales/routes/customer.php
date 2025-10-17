@@ -23,17 +23,17 @@ Route::prefix('/sales')
                     });
                 
                  Route::controller(TCore\Sales\Http\Controllers\Enq\EnqController::class)
-                    ->prefix('/enq')
+                    ->prefix('/enqs')
                     ->name('enq.')
                     ->group(function () {
                         Route::get('/', 'index')->name('index');
 
 
                         Route::get('/create', 'create')->name('create');
-                        // Route::post('/store', 'store')->name('store');
-                        // Route::put('/update', 'update')->name('update');
-                        // Route::get('/edit/{id}', 'edit')->name('edit');
-                        // Route::delete('/delete/{id}', 'delete')->name('delete');
+                        Route::post('/store', 'store')->name('store');
+                        Route::put('/update', 'update')->name('update');
+                        Route::get('/edit/{id}', 'edit')->name('edit');
+                        Route::delete('/delete/{id}', 'delete')->name('delete');
                     });    
 
                 Route::controller(TCore\Sales\Http\Controllers\Customer\CustomerReturnController::class)

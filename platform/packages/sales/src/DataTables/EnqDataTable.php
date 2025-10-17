@@ -25,7 +25,7 @@ class EnqDataTable extends DataTables
 
     protected function setColumnHasSearch(): void
     {
-        $this->columnHasSearch = ['info', 'company', 'short_name', 'tax_code', 'enq_type', 'admin_id', 'assigns', 'created_at'];
+        $this->columnHasSearch = ['enq_code', 'company', 'short_name', 'tax_code', 'enq_type', 'admin_id', 'assigns', 'created_at'];
     }
 
     protected function setColumnSearchDate(): void
@@ -71,50 +71,69 @@ class EnqDataTable extends DataTables
             'info' => fn($data) => view('packages_sales::enqs.datatables.columns.info')->with('data', $data),
             'assigns' => fn($data) => $data->assigns->pluck('fullname')->implode(', ') ?: '-',
             'company' => fn($data) => e($data->company ?? '-'),
+            'enq_code' => fn($data) => e($data->enq_code ?? '-'),
+
+            // ✅ Hiển thị trạng thái có màu
+            'status' => function ($data) {
+                $status = $data->status?->name ?? 'Pending'; // lấy tên Enum
+                $label = $data->status?->value ?? 'Pending'; // giá trị tiếng Việt
+
+                $colors = [
+                    'Pending' => 'secondary',   // xám
+                    'TakingPrice' => 'warning', // vàng
+                    'QuotedPrice' => 'info',    // xanh dương
+                    'HavePo' => 'success',      // xanh lá
+                ];
+
+                $color = $colors[$status] ?? 'secondary';
+
+                return '<span class="badge bg-' . $color . '">' . e($label) . '</span>';
+            },
+
             'short_name' => fn($data) => e($data->short_name ?? '-'),
             'tax_code' => fn($data) => e($data->tax_code ?? '-'),
             'gender' => fn($data) => e($data->gender ?? '-'),
             'action' => 'packages_sales::enqs.datatables.columns.action',
         ];
     }
-
     protected function setRawColumns(): void
     {
-        $this->rawColumns = ['action', 'info'];
+     
+        $this->rawColumns = ['action', 'info', 'status'];
     }
+
+ 
 
     protected function setConfigColumns(): void
     {
         $this->configColumns = [
-            'info' => [
-                'title' => 'Tên Khách Hàng',
+            'enq_code' => [
+                'title' => 'Mã ENQ',
                 'orderable' => false,
             ],
             'company' => [
                 'title' => 'Công Ty',
                 'orderable' => false,
             ],
-            'short_name' => [
-                'title' => 'Tên Viết Tắt',
-                'orderable' => false,
-            ],
-            'tax_code' => [
-                'title' => 'Mã Số Thuế',
-                'orderable' => false,
-            ],
+
+
             'gender' => [
                 'title' => 'Loại Khách Hàng',
                 'orderable' => false,
             ],
-            'email' => [
-                'title' => 'Email',
-                'orderable' => false,
-            ],
+
             'admin_id' => [
                 'title' => 'Người Tạo',
                 'orderable' => false,
             ],
-
+            'created_at' => [
+                'title' => 'Ngày yêu cầu',
+                'orderable' => false,
+            ],
+            'status' => [
+                'title' => 'Trạng thái',
+                'orderable' => false,
+            ],
             'action' => [
                 'title' => 'Hành Động',
                 'orderable' => false,
