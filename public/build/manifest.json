@@ -1,0 +1,166 @@
+{
+  "platform/core/base/public/css/init.css": {
+    "file": "assets/init.css",
+    "src": "platform/core/base/public/css/init.css",
+    "isEntry": true
+  },
+  "platform/core/base/public/js/alert.js": {
+    "file": "assets/alert-BHu2wVga.js",
+    "name": "alert",
+    "src": "platform/core/base/public/js/alert.js",
+    "isEntry": true
+  },
+  "platform/core/base/public/js/ckfinder.js": {
+    "file": "assets/ckfinder-3Lc6CZby.js",
+    "name": "ckfinder",
+    "src": "platform/core/base/public/js/ckfinder.js",
+    "isEntry": true
+  },
+  "platform/core/base/public/js/filepond.js": {
+    "file": "assets/filepond-nSR-4pPi.js",
+    "name": "filepond",
+    "src": "platform/core/base/public/js/filepond.js",
+    "isEntry": true
+  },
+  "platform/core/base/public/js/i18n.js": {
+    "file": "assets/i18n-CMwAspve.js",
+    "name": "i18n",
+    "src": "platform/core/base/public/js/i18n.js",
+    "isEntry": true
+  },
+  "platform/core/base/public/js/init.js": {
+    "file": "assets/init-Bjyeb4R3.js",
+    "name": "init",
+    "src": "platform/core/base/public/js/init.js",
+    "isEntry": true
+  },
+  "platform/core/base/public/js/lib-ajax.js": {
+    "file": "assets/lib-ajax-DOXAnEXJ.js",
+    "name": "lib-ajax",
+    "src": "platform/core/base/public/js/lib-ajax.js",
+    "isEntry": true
+  },
+  "platform/core/base/public/js/modal-form.js": {
+    "file": "assets/modal-form-CtgrIboM.js",
+    "name": "modal-form",
+    "src": "platform/core/base/public/js/modal-form.js",
+    "isEntry": true
+  },
+  "platform/core/base/public/js/modal.js": {
+    "file": "assets/modal-ClMw1kxH.js",
+    "name": "modal",
+    "src": "platform/core/base/public/js/modal.js",
+    "isEntry": true
+  },
+  "platform/core/base/public/js/select2.js": {
+    "file": "assets/select2-DEfnbaYS.js",
+    "name": "select2",
+    "src": "platform/core/base/public/js/select2.js",
+    "isEntry": true
+  },
+  "platform/core/base/resources/assets/css/base.css": {
+    "file": "assets/base-l0sNRNKZ.js",
+    "name": "base",
+    "src": "platform/core/base/resources/assets/css/base.css",
+    "isEntry": true
+  },
+  "platform/core/base/resources/assets/js/base.js": {
+    "file": "assets/base-C1iLjsWw.js",
+    "name": "base",
+    "src": "platform/core/base/resources/assets/js/base.js",
+    "isEntry": true
+  },
+  "platform/core/datatable/public/css/datatable.css": {
+    "file": "assets/datatable.css",
+    "src": "platform/core/datatable/public/css/datatable.css",
+    "isEntry": true
+  },
+  "platform/core/datatable/public/js/buttons.server-side.js": {
+    "file": "assets/buttons.server-side-BtHAXg7i.js",
+    "name": "buttons.server-side",
+    "src": "platform/core/datatable/public/js/buttons.server-side.js",
+    "isEntry": true
+  },
+  "platform/core/datatable/public/js/datatable.js": {
+    "file": "assets/datatable-D9mLpnV5.js",
+    "name": "datatable",
+    "src": "platform/core/datatable/public/js/datatable.js",
+    "isEntry": true
+  },
+  "platform/packages/example/public/css/example.css": {
+    "file": "assets/example-l0sNRNKZ.js",
+    "name": "example",
+    "src": "platform/packages/example/public/css/example.css",
+    "isEntry": true
+  },
+  "platform/packages/example/resources/assets/css/example.css": {
+    "file": "assets/example-DP2rzg_V.js",
+    "name": "example",
+    "src": "platform/packages/example/resources/assets/css/example.css",
+    "isEntry": true
+  },
+  "platform/packages/example/resources/assets/js/example.js": {
+    "file": "assets/example-C1iLjsWw.js",
+    "name": "example",
+    "src": "platform/packages/example/resources/assets/js/example.js",
+    "isEntry": true
+  },
+  "platform/packages/leaverequest/public/css/example.css": {
+    "file": "assets/example-K6Dvbx-E.js",
+    "name": "example",
+    "src": "platform/packages/leaverequest/public/css/example.css",
+    "isEntry": true
+  },
+  "platform/packages/leaverequest/resources/assets/css/example.css": {
+    "file": "assets/example-C6Kfwj0f.js",
+    "name": "example",
+    "src": "platform/packages/leaverequest/resources/assets/css/example.css",
+    "isEntry": true
+  },
+  "platform/packages/leaverequest/resources/assets/js/example.js": {
+    "file": "assets/example-CJKTYbLf.js",
+    "name": "example",
+    "src": "platform/packages/leaverequest/resources/assets/js/example.js",
+    "isEntry": true
+  },
+  "platform/packages/workingtime/public/css/example.css": {
+    "file": "assets/example-RnTpOC5-.js",
+    "name": "example",
+    "src": "platform/packages/workingtime/public/css/example.css",
+    "isEntry": true
+  },
+  "platform/packages/workingtime/resources/assets/css/example.css": {
+    "file": "assets/example-DVN7Oi2P.js",
+    "name": "example",
+    "src": "platform/packages/workingtime/resources/assets/css/example.css",
+    "isEntry": true
+  },
+  "platform/packages/workingtime/resources/assets/js/example.js": {
+    "file": "assets/example-D8n-2IEH.js",
+    "name": "example",
+    "src": "platform/packages/workingtime/resources/assets/js/example.js",
+    "isEntry": true
+  },
+  "platform/themes/cms/resources/assets/css/cms.css": {
+    "file": "assets/cms.css",
+    "src": "platform/themes/cms/resources/assets/css/cms.css",
+    "isEntry": true
+  },
+  "platform/themes/cms/resources/assets/js/cms.js": {
+    "file": "assets/cms-p_DUxY03.js",
+    "name": "cms",
+    "src": "platform/themes/cms/resources/assets/js/cms.js",
+    "isEntry": true
+  },
+  "resources/css/app.css": {
+    "file": "assets/app.css",
+    "src": "resources/css/app.css",
+    "isEntry": true
+  },
+  "resources/js/app.js": {
+    "file": "assets/app-C1iLjsWw.js",
+    "name": "app",
+    "src": "resources/js/app.js",
+    "isEntry": true
+  }
+}
